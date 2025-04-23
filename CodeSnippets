@@ -33,3 +33,214 @@ StudentList
 		</table>
 	</body>
 </html>
+
+Controller
+	@GetMapping({"","/"})
+	public String showHomePage() {
+		return "books/home";
+	}
+	@GetMapping("/studentlist")
+	public String readAll(Model model) {
+		List<Student> students = service.readAll();
+		model.addAttribute("students",students);
+		return "student/studentList";
+	}
+
+Service
+
+	public List<Student> readAll() {
+		return repo.readAllItems();
+	}
+
+Repository
+	public List<Student> readAllItems() {
+		
+		return students;
+	}
+
+CreateStudent
+
+
+public class StudentDto {
+	private Long rno;
+	private String name;
+	private String course;
+	private Double percentage;
+}
+
+
+<!doctype html>
+<html>
+	<head>
+		<title>DSU Students</title>
+	</head>
+	<body>
+		<h1>New Student</h1>
+		<form method="post" th:object="${studentDto}">
+			<table width = 60%>
+				<tr>
+					<td>Roll No:</td>
+					<td> <input th:field="${studentDto.rno}"></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td> <input th:field="${studentDto.name}"></td>
+				</tr>
+				<tr>
+					<td>course:</td>
+					<td> <input th:field="${studentDto.course}"></td>
+				</tr>
+				<tr>
+					<td>Percentage:</td>
+					<td> <input th:field="${studentDto.percentage}"></td>
+				</tr>
+				<tr>
+					<td><button type ="submit">Submit</button></td>
+					<td><a  href="/student/studentList">Cancel</a></td>
+				</tr>
+			</table>
+			
+		</form>
+
+	</body>
+</html>
+
+Controller
+	@GetMapping("/createstudent")
+	public String createStudent(Model model) {
+		StudentDto studentDto = new StudentDto();
+		model.addAttribute("studentDto",studentDto);
+		return "student/createStudent";
+	}
+	@PostMapping("/createstudent")
+	public String createStudent(@ModelAttribute StudentDto studentDto) {
+		Student student = new Student();
+		student.setRno(studentDto.getrnl());
+		student.setName(studentDto.getName());
+		student.setCourse(studentDto.getCourse());
+		student.setPercentage(studentDto.getPercentage());
+		service.create(student);
+		return "redirect:/student/studentlist";
+	}
+Service
+
+	public void create(Student student) {
+		repo.createStudent(student);
+	}
+Repository
+	public void createItem(Student student) {
+		students.add(student);
+		
+	}
+
+Update Student
+
+<!doctype html>
+<html>
+	<head>
+		<title>DSU Students</title>
+	</head>
+	<body>
+		<h1>Edit Student</h1>
+		<form method="post" th:object="${studentDto}">
+			<table width = 60%>
+				<tr>
+					<td>Roll No:</td>
+					<td> <input readonly th:field="${studentDto.rno}"></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td> <input th:field="${studentDto.name}"></td>
+				</tr>
+				<tr>
+					<td>Course:</td>
+					<td> <input th:field="${studentDto.course}"></td>
+				</tr>
+				<tr>
+					<td>Percentage</td>
+					<td> <input th:field="${studentDto.percentage}"></td>
+				</tr>
+				<tr>
+					<td><button type ="submit">Submit</button></td>
+					<td><a  href="/student/studentlist">Cancel</a></td>
+				</tr>
+			</table>
+			
+		</form>
+
+	</body>
+</html>
+
+Controller
+@GetMapping("/updatestudent")
+	public String updateStudent(Model model,@RequestParam("rno") Long rno) {
+			Student student = service.getByRno(id);
+			StudentDto studentDto = new StudentDto();
+			studentDto.setRno(student.getRno());
+			studentDto.setName(student.getName());
+			studentDto.setCourse(student.getCourse());
+			studentDto.setgetPercentage(student.getPercentage());
+			model.addAttribute("studentDto",studentDto);
+			return "student/updateStudent";
+	}
+	@PostMapping("/updatestudent")
+	public String updateStudent(@RequestParam("rno") Long rno, @ModelAttribute StudentDto studentDto) {
+			Student student = service.getByRno(rno);
+			student.setName(studentDto.getName());
+			student.setCourse(studentDto.getCourse());
+			student.setPercentage(studentDto.getPercentage());
+			service.update(student);
+			return "redirect:/student/studentlist";
+	}
+Service
+	public void update(Student student) {
+		repo.updateItem(student);
+	}
+Repository
+	public void updateItem(BookLS book) {
+		int index =0;
+		for(int i=0;i<books.size();i++) {
+			if(books.get(i).getId() == book.getId()) {
+				index = i;
+			}
+		}
+		books.set(index, book);
+	}
+
+Delete Student
+
+Controller
+@GetMapping("/deletebookls")
+	public String deleteStudent(@RequestParam("id") Long id) {
+		service.deleteLS(id);
+		return "redirect:/books/booklistls";
+	}
+	
+Service
+	public void deleteLS(Long id) {
+		repoLS.deleteItem(id);
+	}
+	public BookLS getByIdLS(Long id) {
+		return repoLS.getItemById(id);
+	}
+
+Repository
+	public void deleteItem(Long id) {
+		int index =0;
+		for(int i=0;i<books.size();i++) {
+			if(books.get(i).getId() == id) {
+				index = i;
+			}
+		}
+		books.remove(index);
+	}
+	@Override
+	public BookLS getItemById(Long id) {
+		int index =0;
+		for(int i=0;i<books.size();i++) {
+			if(books.get(i).getId() == id) {
+				index = i;
+			}
+		}
+		return books.get(index);
+	}
