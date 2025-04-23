@@ -1,0 +1,372 @@
+Which of the below annotations is used to remove the ambiguity in using @Autowired? 
+Select one: 
+A. @Required 
+B. @Qualified 
+C. @Qualifier 
+D. @Value 
+Answer C. @Qualifier 
+
+
+Which of following method is used to gracefully shutdown all the bean processes after 
+closing the spring container?  
+Select one: 
+A. registerShutdownHook()  
+B. Session methods  
+C. None of these  
+D. destroy method 
+Answer : registerShutdownHook() 
+
+
+Which of the following database is not supported using jdbcTemplate?  
+Select one: 
+O A. MySQL  
+OB. Oracle  
+OC. NoSQL  
+OD. PostgreeSql 
+Answer: NoSQL 
+
+
+Which of the below annota on is used to make a property mandatory?  
+A. @Optional 
+B. @Mandatory  
+C. @Required  
+D. @Resource 
+Answer @Required 
+
+
+Which of the below statements are correct?  
+Select one:  
+A. @Autowired can be applied only on se er methods  
+B. @Autowired can be applied on field, se er or constructor.  
+C. @Autowired can not be applied on constructor  
+D. None of the men oned 
+Answer: B. @Autowired can be applied on field, setter or constructor.  
+
+
+Select the correct statements to add dependendency for devtools in pom.xml file.  
+Select one:  
+A. <dependency> <artifactId>spring-boot-devtools</ar factId> </dependency>  
+B. <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot
+devtools</artifactId> </dependency>  
+C <dependency> <groupId>org.springframework.boot-devtools</groupId> 
+<artifactId>spring-boot-devtools</artifactId> </dependency> 
+D. <dependency> <groupId>org.springframework.boot</groupId> <artifactId> 
+devtools</artifactId> </dependency> 
+Answer : B. <dependency> <groupId>org.springframework.boot</groupId> 
+<artifactId>spring-boot-devtools</ar factId> </dependency>  
+
+
+What is true about <list> collec on configuration elements 
+Select one:  
+A. This helps in wiring a list of values but without any duplicates. 
+B. This can be used to inject a collec on of name-value pairs where the name and value are 
+both Strings.  
+C. This helps in wiring a list of values, allowing duplicates.  
+D. This can be used to inject a collec on of name-value pairs where name and value can be 
+of any type. 
+Answer C. This helps in wiring a list of values, allowing duplicates.  
+
+
+Which of the below statements are correct to define spring boot actuator dependency in 
+pom.xml?  
+Select one:  
+A <dependency> <ar factId>spring-boot-starter-actuator</ar factId> </dependency> 
+B. <dependency> <groupId>org.springframework.boot</groupId> <ar factId>spring-boot
+actuator</ar factId> </dependency>  
+C. <dependency> <groupId>org.springframework.boot</groupId> <ar factId>spring-boot
+starter-actuator</ar factId> </dependency> 
+D. <dependency> <groupId>org.springframework.boot</groupId> <ar factId>spring
+actuator</ar factId> </dependency>  
+Answer C. <dependency> <groupId>org.springframework.boot</groupId> <ar factId>spring
+boot-starter-actuator</ar factId> </dependency> 
+
+
+How spring boot does bootstrapping of the application? Assume BootDemoApplication is 
+name of the class containg main method 
+Select one: A. By using@BootStrap annotation  
+B. By using SpringApplication.run(BootDemoApplication.class, args); 
+C. By using BootApplication.run(BootDemoApplication.class, args); 
+D. Neither A nor B 
+Answer B 
+
+What is a microservice? 
+Select one: 
+OA. A design used primarily in functional programming and object-oriented programming 
+OB. A style of design for enterprise systems based on a loosely coupled component 
+architecture  
+OC. A very small piece of code that never gets any bigger than 10 lines  
+OD. A small program that represents discrete logic that executes within a well-defined 
+boundary on dedicated hardware 
+Answer : B. A style of design for enterprise systems based on a loosely coupled component 
+architecture 
+
+
+When would developers use microservices?  
+A. When they create applica ons specifically for scien fic test equipment  
+B. When they need to create large, enterprise-level applica ons that are subject to changes 
+on a frequent basis 
+C. When they work with ephemeral nano technology  
+D. When they want to write cell phone applica ons that run quickly 
+Answer B. When they need to create large, enterprise-level applica ons that are subject to 
+changes on a frequent basis 
+
+
+Which of the following responses is an advantage of microservices? 
+Select one: 
+A. They're so small that developers can typically write very powerful ones with a few lines of 
+text 
+B. Any microservice component can change independently from other components  
+C. They are easy to manage  
+D. They don't require a lot of exper se to program 
+Answer : B. Any microservice component can change independently from other components  
+
+
+What does the term "bounded context" mean in relation to microservices? 
+Select one:  
+A. The logical domain represented by the data consumed and emi ed by a microservice 
+according to the a  
+B. How a microservice uses memory  
+C. The cloud provider's region where the microservice operates  
+D. The common characteris cs within a collec on of en es in one or many business 
+domains 
+Answer A. The logical domain represented by the data consumed and emi ed by a 
+microservice according to the a 
+
+
+How is distributed tracing used in microservices?  
+Select one:  
+A. As a mechanism to observe the behavior of dis nct system calls between and within 
+microservices  
+B. As a mechanism to transfer log management between a given host on demand  
+C. As a mechanism to ensure that failed microservices are resurrected properly  
+D. As a mechanism to change the behavior of a microservice at runme 
+Answer A. As a mechanism to observe the behavior of dis nct system calls between and 
+within microservices  
+
+
+What is a popular Java framework to develop microservices?  
+Select one:  
+A. None of the above  
+B. Spring Boot  
+C. Eclipse MicroProfile 
+D. Both A and B 
+Answer: Both A and B 
+
+
+How does a backing service apply to microservices?  
+Select one:  
+A. It acts as a dedicated service that provides essen al func onality required by a 
+microservice  
+B. It coordinates network ac vity between microservices  
+C. It shuts down a microservice when it can no longer handle the compu ng load  
+D. It prevents a microservice from failing 
+Answer A. It acts as a dedicated service that provides essen al func onality required by a 
+microservice  
+
+
+Which of the following responses is a disadvantage of microservices?  
+Select one: 
+A. Microservices are very difficult to manage at scale  
+B. Microservices require a lot of monitoring to operate effec vely  
+C. Neither A nor B  
+D. Both A and B 
+Answer D. Both A and B 
+
+
+What's the difference between a microservices-oriented architecture (MOA) and a service
+oriented architecture (SOA)? 
+A. An SOA uses intermedia on technology to facilitate communica on between services  
+B. An MOA shares as li le data as possible while an SOA shares as much data as possible  
+C All the above 
+D. A developer can run a monolithic applica on with SOA principles 
+Answer C. All the above 
+
+
+What are some technologies commonly used to implement microservices?  
+Select one: 
+A. Docker 
+B. Kubernetes  
+C. Both A and B  
+D. python 
+Answer : C. Both A and B  
+
+The aim of the module is to try and improve the development me while working with the 
+Spring Boot applica on  
+Select one:  
+A. Spring security  
+B. Spring Boot Data JPA  
+C. Spring Boot DevTools  
+D. SpringBootAcutator 
+Answer C. Spring Boot DevTools  
+
+
+The annotation is used to define the request body content type.  
+Select one:  
+A @PathVariable  
+B. @Requestparam  
+C. @RequestBody  
+D. @RequestMapping 
+Answer C. @RequestBody 
+
+The annotation allows the applica on to automic cally trigger a browser refresh whenever we make 
+changes in the resources.  
+Select one: 
+A Live 
+B. AutoRefresh 
+C. LiveRefresh 
+D. LiveReload 
+Answer D. LiveReload 
+
+
+Which Of The Following Command Is Used To Package The Applica on Using Maven? 
+Select one  
+A. Mvn.clean install  
+B. Mvn package 
+C.   Mvn deploy 
+D.  Mvn complie 
+Answer Mvn package 
+
+
+Is it possible to read applica on configura on from an external file. User overrides  
+Select one:  
+A. Always Preview 
+B. No Results Permissions  
+C. Maybe  
+D. Yes 
+Answer D. Yes 
+
+
+The command is used to execute jar file  
+Select one: 
+A Runjar  
+B. Java launch jar  
+C Java-jarjar  
+DRun java jar 
+Answer D. Run java jar 
+
+
+The annotation is used to define the custom or dynamic request URI.  
+Select  
+A. @RequestMapping 
+B. @GetMapping  
+C. @PostMapping cy breakdown 
+D. @PathVariable 
+Answer D. @PathVariable 
+
+
+Which of the following tag is used to add package information in pom.xml?  
+Select one:  
+A Dependencies 
+B. Packaging  
+C Version  
+E. Package 
+Answer  B. Packaging 
+
+
+The annotation is used to define RESTful web service.  
+Select one:  
+A @RestController  
+B. @Component 
+C@Controller  
+D. @Service 
+Answer  A. @RestController 
+
+
+Which of the following dependencies should be added to send and receive json data to a 
+method? 
+Select one  
+A Spring boot-starter web  
+B. Spring-boot-starter-test  
+C. Spring boot starter data pa  
+D. Spring-boot-starter-son 
+Answer A. spring-boot-starter-web 
+
+What is the use of existsByld() ?  
+Select one:  
+A. Returns whether an en ty with the given id exists. 
+B. Returns whether a Repository exists or not  
+C. Returns whether a record exists or not. 
+D. Return Error 
+Answer A. Returns whether an en ty with the given id exists. 
+
+
+What does cascading means? 
+A. When some master records are changed, what is the impact of detail records  
+B. None  
+C. Changing foreign key 
+D. Removing foreign key 
+Answer A. When some master records are changed, what is the impact of detail records 
+
+
+Which of the following method is used to delete an En ty by using its id?  
+Select one:  
+A. deleteld()  
+B. deleteById()  
+C. Delete()  
+D. Erase 
+Answer : B. deleteById()  
+
+
+Which of the following method of CrudRepository is used to return the number of en es 
+available?  
+Select one:  
+A. Number()  
+B. Count() 
+C. exitsById() 
+D. Present() 
+Answer B. Count() 
+
+
+Suppose, table name and entity name is different, which annotation is used to mention the 
+table name? 
+Select one:  
+A. @Row  
+B. @En ty  
+C. @Table  
+D. @Column 
+Answer : C. @Table 
+
+
+which of the following annota on is used to map attribute of an Entity to a Table column? 
+Select one:  
+A @Row  
+B. @Field  
+C. @Field  
+D. @Column 
+Answer D. @Column 
+
+
+Which is the superinterface of Paging And Sorting Repository?  
+Select one:  
+A. JPARepository  
+B. DataRepository  
+C. Repository 
+D. CrudRepository 
+Answer: D. CrudRepository 
+
+
+Which of the following annotation is used for one to many mapping?  
+Select one:  
+A. None  
+B. @OneMany  
+C. @Many ToOne 
+D. @OneToMany 
+Answer : D. @OneToMany 
+
+
+Which of the following interface is having batch updates?  
+Select one:  
+A. Crud Repository  
+B. Repository 
+C.   JPARepository  
+D. DataRepository 
+Answer : C. JpaRepository 
+
+
+Shall we add the driver library(jar) loca on in pom.xml?  
+Select one: 
+A. Only for Produc on builds  
+B. Only if using Maven  
+C. No  
+D. Yes 
+Answer B. Only if using Maven 
